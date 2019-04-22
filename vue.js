@@ -1,5 +1,5 @@
 /*!
- * Vue.js v1.0.21
+ * Vue.js v1.0.21源码
  * (c) 2016 Evan You
  * Released under the MIT License.
  */
