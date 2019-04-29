@@ -1,2 +1,2 @@
-# vue-demo
+# demo
 guestbook
