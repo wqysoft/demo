@@ -1,0 +1,113 @@
+body{
+    width: 60%;
+    margin: 0 auto;
+    padding:10px 0;
+    font-size: 20px;
+    text-align: center;
+}
+/* 第一部分样式 */
+.project-container .tip-top{
+    padding: 0 100px;
+    margin-top: 50px;
+}
+.project-container .tip-top>div{
+    display: inline-block;
+}
+.project-container .tip-top .step-arrow{
+   position: relative;
+   bottom: 50px;
+}
+.project-container .tip-top .svg{
+    font-size: 50px;
+    color: #c7c7c7;
+    width: 100px;
+    margin: 0 auto;
+}
+
+#iconjiantou1,#iconjiantou2{
+    font-size: 50px;
+    color: #c7c7c7;
+}
+/* 第二部分输入框的样式 */
+.form-container{
+    height: 15rem;
+    margin-top: 20px;
+  }
+  .input-box {
+    width: 90%;
+    height: 3.75rem;
+    border-radius: 0.25rem;
+    border: solid 0.032rem #c7c7c7;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  .input-box > input {
+    width: 90%;
+    height: 2.25rem;
+    outline: none;
+    border: none;
+    background: none;
+    padding: 0;
+    line-height: .5rem;
+    color: #010101;
+    font-size: 1.2rem;
+    text-align: left;
+  }
+  
+  .input-box > input::placeholder {
+    line-height: 1.25rem;
+    color: #999;
+    font-size: 1.3rem;
+  }
+  
+  #getSms {
+    position: absolute;
+    left: 32rem;
+    height: 2.75rem;
+    line-height: 2.75rem;
+    font-size: 1.338rem;
+    color: #09f;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .input-box > .btn.grey {
+    color: #999;
+  }
+
+  .atn-btn{
+    display: block;
+    width: 90%;
+    height: 2.75rem;
+    background-color: #09f;
+    border-radius: 0.25rem;
+    color: #fff;
+    font-size: 1.125rem;
+    text-align: center;
+    line-height: 2.75rem;
+    margin: 0 auto;
+    margin-top: 1.875rem;
+  }
+  .form-container.stepForm2,.form-container.stepForm3{
+    display: none;
+  }
+
+  /* 第三部分提示字体的样式 */
+  .step-tip{
+    width: 90%;
+    margin: 0 auto;
+    line-height: 1.70rem;
+    color: #999;
+    text-align: left;
+  }
+  #stepTip2,#stepTip3{
+      display: none;
+  }
+  
+ 
+  
+ 

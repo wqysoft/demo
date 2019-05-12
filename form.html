@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>手机验证</title>
+    <!-- 插入icon代码 -->
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <!-- 插入自己写的css文件 -->
+    <link rel="stylesheet" href="form.css">
+    <script src="form.js"></script>
+</head>
+
+<body>
+    <div class="project-container">
+        <!-- 步骤提示操作开始 -->
+        <div class="tip-top" id="top">
+            <div class="step-first">
+                <span class="iconfont icon-zhijieshuruhaoma svg" id="iconstyle1" style="color:#4cd694"></span>
+                <p>输入号码</p>
+            </div>
+            <div class="step-arrow">
+                <span class="iconfont icon-jiang-copy" id="iconjiantou1"></span>
+
+            </div>
+            <div class="step-second">
+                <span class="iconfont icon-shoujiyanzheng1 svg" id="iconstyle2"></span>
+                <p>手机验证</p>
+            </div>
+            <div class="step-arrow">
+                <span class="iconfont icon-jiang-copy" id="iconjiantou2"></span>
+
+            </div>
+            <div class="step-third">
+                <span class="iconfont icon-zhongzhimima svg" id="iconstyle3"></span>
+                <p>重置密码</p>
+            </div>
+        </div>
+    </div>
+    <!-- 步骤提示操作结束 -->
+    <!-- 表单操作开始 -->
+    <div class="form-container">
+        <div class="form-container stepForm1" id="stepForm1"><!--第一个下一步-->
+            <div class="input-box">
+                <input type="number" id="telnum" placeholder="请输入手机号">
+            </div>
+            <p class="atn-btn" onclick="next(1)" style="cursor:pointer">下一步</p>
+        </div>
+        <div class="form-container stepForm2" id="stepForm2"><!--第二个下一步-->
+            <div class="input-box" style="margin-bottom:10px">
+                <input type="text" id="idcard" placeholder="请输入身份证号码">
+            </div>
+            <div class="input-box" id="stepForm3">
+                <input type="text" id="sms" placeholder="请输入验证码">
+                <input type="button" id="getSms" onclick="settime()" value="  获取验证码" style="cursor:pointer"></p>
+            </div>
+            <p class="atn-btn" onclick="next(2)" style="cursor:pointer">下一步</p>
+        </div>
+        <div class="form-container stepForm3" id="stepForm"><!--第三个下一步-->
+            <div class="input-box" style="margin-bottom:10px">
+                <input type="password" placeholder="请输入6位数字新密码" id="password">
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="请再次输入新密码" id="repassword">
+            </div>
+            <p class="atn-btn" onclick="next(3)" style="cursor:pointer">完成</p>
+        </div>
+    </div>
+    <!-- 表单操作结束 -->
+    <!-- 提示文本框开始 -->
+    <div class="step-tip" id="stepTip1">
+        <p>温馨提示：</p>
+        <p>1.请输入您本人使用的联通手机号码，重置服务密码时需进行短信验证；</p>
+        <p>2.部分新入网联通号码可能提示“非联通手机号码，导致无法重置密码”，建议您隔天再试或您拨打10010客服热线进行密码修改。"</p>
+    </div>
+    <div class="step-tip" id="stepTip2">
+        <p>温馨提示：</p>
+        <p>1.请准确输入联通手机机主身份证号后六位数字，身份证证件号号码最后一位为X时，请输入大写的X；</p>
+        <p>2.短信验证码五分钟有效，每天限修改五次密码，最多发5条验证码，请您注意使用；</p>
+        <p>3.如果网络或系统繁忙导致手机收不到短信验证码，请您拨打10010客服热线进行密码修改。</p>
+    </div>
+    <div class="step-tip" id="stepTip3">
+        <p>温馨提示：</p>
+        <p>1.新密码只能是六位数字；</p>
+        <p>2.为保证您的信息安全，请避免设置如下密码：</p>
+        <p>1）连续相同的六个重复数字，如666666、999999；</p>
+        <p>2）六位连续升序和降序数字，如123456、654321；</p>
+        <p>3）有规律重复数字，如121212、456456、235235；</p>
+        <p>4）手机号后6位；</p>
+        <p>3.如果重置失败请拨打10010客服热线进行密码修改。</p>
+    </div>
+    <!-- 提示文本框结束 -->
+       
+</body>
+
+</html>
