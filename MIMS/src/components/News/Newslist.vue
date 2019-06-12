@@ -18,7 +18,6 @@
   </div>
 </template>
 <script>
-
 export default {
   name:"newsList",
   data() {
@@ -36,7 +35,6 @@ created(){
   })
   .then(res=>{
      this.newsList=res.data;
-    //  console.log(this.newsList);
     
    })
    .catch(err=>{
@@ -74,5 +72,8 @@ ul li .new_img img{
   float:right;
   color: #949494;
  
+}
+ul li{
+margin-top: 20px;
 }
 </style>
