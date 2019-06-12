@@ -5,12 +5,14 @@ import Home from '@/components/Home/Home'
 import Vip from '@/components/Vip/Vip'
 import Search from '@/components/Search/Search'
 import Cart from '@/components/Cart/Cart'
-import NewsList from '@/components/News/NewsList'
+import NewsList from '@/components/News/Newslist'
+
 //使用vue-router插件vue.protyte.$router=Router;
 Vue.use(Router)
 
 export default new Router({
   //匹配的路由规则
+  linkActiveClass:'link-active',
   routes: [
     {
       path: '/',
@@ -41,5 +43,6 @@ export default new Router({
       name: 'news.list',
       component: NewsList
     },
+  
   ]
 })

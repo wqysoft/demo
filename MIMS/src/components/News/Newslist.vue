@@ -1,52 +1,42 @@
 <template>
-  <div id="newList">
+  <div class="news">
+    <Navbar title="新闻资讯"></Navbar>
+    <div class="newsList">
     <ul>
-     <NewList></NewList>
-     <NewList></NewList>
-     <NewList></NewList>
-     <NewList></NewList>
-     <NewList></NewList>
-     <NewList></NewList>
-     <NewList></NewList>
-     <NewList></NewList>
+     <li v-for="news in newsList.result.data" :key="news.id">
+       <a :href="news.url">
+         <div class=new_img>
+           <img :src="news.thumbnail_pic_s"/>
+         </div>
+           <h4 class="title">{{news.title}}</h4>
+           <span class="author_name">{{news.author_name}}</span>
+           <span class="time">{{news.date}}</span>
+       </a>
+     </li>
     </ul>
+  </div>
   </div>
 </template>
 <script>
-var NewList={
-  template:`
-   <li style="margin-top: 20px;">
-    <a href="#">
-      <div class="new_img" style="float: left;margin-right:20px;">
-        <img style="width: 100px;height: 100px;margin-top: 10px;" src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=b5e4c905865494ee982209191df4e0e1/c2cec3fdfc03924590b2a9b58d94a4c27d1e2500.jpg" alt="">
-      </div>
-      <div class="content">
-        <h4 class="title">我爱你中国我爱你中国我爱你中国我爱你中国</h4>
-        <div class="news-desc">
-          <p class="summary" style="color:#000;">我的摘要内容我的摘要内容我的摘要内容我的摘要内容</p>
-          <p class="edit" style="color:coral;">
-            <span class="praise" style="margin-right: 10px;">点赞数:5</span>
-            <span class="time">发表时间:2017-08-09</span>
-          </p>
-        </div>
-      </div>
-    </a>
-  </li>
-  `
-}
+
 export default {
+  name:"newsList",
   data() {
     return {
+      newsList:[]
     };
   },
-  components:{
-    NewList
-  },
 created(){
-   this.$axios.get('')
-   .then(res=>{
-     this.newsList=res.data.message;
-     console.log(this.newsList);
+   this.$axios.get('/toutiao/index', {
+    params: {
+      type: 'yule'
+    },headers: {
+            'Authorization': 'APPCODE 4b78d6523aac430aa69bea6d61a421b4'
+        }
+  })
+  .then(res=>{
+     this.newsList=res.data;
+    //  console.log(this.newsList);
     
    })
    .catch(err=>{
@@ -57,5 +47,32 @@ created(){
 };
 </script>
 <style scoped>
-
+.newsList ul li {
+  padding: 5px 5px 0 0;
+  height:100px;
+  border-bottom: .5px solid #c6c6c6;
+}
+ul li .new_img{
+  float: left;
+  margin-right:20px;
+  margin-top:-8px;
+}
+ul li .new_img img{
+ width: 120px;
+ height: 90px;
+ margin-top: 10px; 
+}
+.title{
+  color:#000;
+  height: 70px;
+}
+.author_name{
+ 
+   color:coral;
+}
+.time{
+  float:right;
+  color: #949494;
+ 
+}
 </style>

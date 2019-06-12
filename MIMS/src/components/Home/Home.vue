@@ -32,6 +32,7 @@ import food1 from "../../assets/foodO.jpg";
 import food2 from "../../assets/foodT.jpg";
 import food3 from "../../assets/foodTH.jpg";
 import food4 from "../../assets/foodF.jpg";
+
 export default {
   name: "Home",
   data() {
