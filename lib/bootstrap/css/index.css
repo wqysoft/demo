@@ -1,0 +1,13 @@
+/*
+ 通用样式
+ */
+ body{
+     font-size: 13px;
+     font-family: Arial, Helvetica, sans-serif;
+     color: #000;
+ }
+
+
+ .top-bar{
+     background-color:red;
+ }
