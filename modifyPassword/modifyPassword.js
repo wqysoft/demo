@@ -1,4 +1,3 @@
-
 // 验证手机号
 function checkTel() {
     var telnumber = document.getElementById("telnum").value;
@@ -48,7 +47,7 @@ function checkPassword() {
         clear();
     }
     else if (pass !== repass) {
-        alert("用户名和密码不相等！");
+        alert("两次密码不相等！");
         clear();
     }
     else if (lasttel == pass) {
@@ -97,7 +96,6 @@ function Current() {
 
     
 }
-
 
 //下一步操作
 function next(step) {
